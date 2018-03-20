@@ -11,9 +11,10 @@ http.createServer
 			}
 		);
 		var params = url.parse(request.url, true).query;
-		var nombre = params.nombre;
+		var nombre   = params.nombre;
+		var apellido = params.apellido;
 		response.end(
-			'hola '+nombre
+			'hola '+nombre+' '+apellido
 		);
 	}
 ).listen(3000);
