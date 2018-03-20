@@ -10,8 +10,10 @@ http.createServer
 				'Content-Type':'text/plain'
 			}
 		);
+		var params = url.parse(request.url, true).query;
+		var nombre = params.nombre;
 		response.end(
-			'hola mundo'
+			'hola '+nombre
 		);
 	}
 ).listen(3000);
